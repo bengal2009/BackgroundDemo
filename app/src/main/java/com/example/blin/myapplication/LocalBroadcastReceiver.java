@@ -39,10 +39,11 @@ import android.view.WindowManager;
  * Created by blin on 2015/4/7.
  */
 public class LocalBroadcastReceiver extends BroadcastReceiver {
+    private String TAGSTR= "LocalBroadcastReceiver";
     @Override
     public void onReceive(Context context, Intent intent) {
         String message = intent.getStringExtra("number");
-        Log.i("BRRECIVER", "Receive!");
+        Log.i(TAGSTR, "Receive!");
 
         showDialogInBroadcastReceiver(context, message);
     }
